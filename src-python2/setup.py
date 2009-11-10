@@ -9,9 +9,28 @@ if not hasattr(DistributionMetadata, 'download_url'):
     DistributionMetadata.download_url = None
     
 setup(
-    name = 'chardet',
-    version = '1.0.1',
-    description = 'Universal encoding detector',
+    name = "chardet",
+    packages = ["chardet"],
+    version = "2.0.1",
+    license = "LGPL",
+    platforms = ['POSIX', 'Windows'],
+    description = "Universal encoding detector",
+    author = "Mark Pilgrim",
+    author_email = "mark@diveintomark.org",
+    url = "http://chardet.feedparser.org/",
+    download_url = "http://chardet.feedparser.org/download/python2-chardet-2.0.1.tgz",
+    keywords = ["encoding", "i18n", "xml"],
+    classifiers = [
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Development Status :: 4 - Beta",
+        "Environment :: Other Environment",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)",
+        "Operating System :: OS Independent",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Text Processing :: Linguistic",
+        ],
     long_description = """\
 Universal character encoding detector
 -------------------------------------
@@ -30,23 +49,5 @@ Detects
  - TIS-620 (Thai)
 
 Requires Python 2.1 or later
-""",
-    author='Mark Pilgrim',
-    author_email = 'mark@diveintomark.org',
-    url = 'http://chardet.feedparser.org/',
-    download_url = 'http://chardet.feedparser.org/download/',
-    license = "LGPL",
-    platforms = ['POSIX', 'Windows'],
-    keywords = ['encoding', 'i18n', 'xml'],
-    classifiers = [
-        "Development Status :: 4 - Beta",
-        "Environment :: Other Environment",
-        "Intended Audience :: Developers",
-        "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)",
-        "Operating System :: OS Independent",
-        "Programming Language :: Python",
-        "Topic :: Software Development :: Libraries :: Python Modules",
-        "Topic :: Text Processing :: Linguistic",
-        ],
-    packages = ['chardet']
+"""
     )

@@ -41,7 +41,7 @@ if not docs_version:
     sys.exit(1)
 
 setup_re = re.compile(r'^\s*version\s*=\s*["\'](.*?)["\']\s*,\s*$')
-for line in file('setup.py'):
+for line in file('src-python2/setup.py'):
     m = setup_re.search(line)
     if m:
         setup_version = m.group(1)

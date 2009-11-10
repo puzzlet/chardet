@@ -6,7 +6,7 @@
 %entities_version;
 <!ENTITY license SYSTEM "license.xml">
 <!ENTITY chardet "<application>Universal Encoding Detector</application>">
-<!ENTITY chardet_version "1.0.1">
+<!ENTITY chardet_version "2.0.1">
 <!ENTITY chardet_modulename "<filename class='headerfile'>chardet</filename>">
 <!ENTITY title "Documentation">
 <!ENTITY url_book "http://chardet.feedparser.org/docs/">
@@ -196,7 +196,7 @@ print detector.result]]></programlisting>
 <example id="advanced.multifile.multiline">
 <title>Detecting encodings of multiple files</title>
 <programlisting language="python"><![CDATA[import glob
-from charset.universaldetector import UniversalDetector
+from chardet.universaldetector import UniversalDetector
 
 detector = UniversalDetector()
 for filename in glob.glob('*.xml'):
@@ -270,6 +270,16 @@ for filename in glob.glob('*.xml'):
 </sectioninfo>
 <title>Revision history</title>
 <variablelist>
+<varlistentry>
+<term><constant>2.0.1</constant> (2009-11-10)</term>
+<listitem>
+<itemizedlist>
+<listitem><para>Migrated to <ulink url="http://code.google.com/p/chardet"/></para></listitem>
+<listitem><para>Fixed minor typo in documentation</para></listitem>
+<listitem><para>Synchronized version numbers of Python 2 and Python 3 versions</para></listitem>
+</itemizedlist>
+</listitem>
+</varlistentry>
 <varlistentry>
 <term><constant>1.0.1-py3</constant> (2009-06-26)</term>
 <listitem>

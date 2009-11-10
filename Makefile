@@ -1,4 +1,4 @@
-VERSION = 1.0.1
+VERSION = 2.0.1
 XSLTPROC = xsltproc
 XMLLINT = xmllint
 PYTHON2 = python2.6
@@ -48,7 +48,7 @@ dist: validate
 
 	mkdir -p dist/python2-chardet-${VERSION}
 	cp COPYING dist/python2-chardet-${VERSION}
-	cp setup.py dist/python2-chardet-${VERSION}
+	cp src-python2/setup.py dist/python2-chardet-${VERSION}
 	rsync -az src-python2/chardet dist/python2-chardet-${VERSION}
 	rsync -az docs/dist/docs dist/python2-chardet-${VERSION}
 	cd dist; \
@@ -57,7 +57,7 @@ dist: validate
 
 	mkdir -p dist/python3-chardet-${VERSION}
 	cp COPYING dist/python3-chardet-${VERSION}
-	cp setup.py dist/python3-chardet-${VERSION}
+	cp src-python3/setup.py dist/python3-chardet-${VERSION}
 	rsync -az src-python3/chardet dist/python3-chardet-${VERSION}
 	rsync -az docs/dist/docs dist/python3-chardet-${VERSION}
 	cd dist; \
