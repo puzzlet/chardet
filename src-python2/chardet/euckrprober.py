@@ -39,3 +39,16 @@ class EUCKRProber(MultiByteCharSetProber):
 
     def get_charset_name(self):
         return "EUC-KR"
+
+from mbcssm import CP949SMModel
+
+class CP949Prober(MultiByteCharSetProber):
+    def __init__(self):
+        MultiByteCharSetProber.__init__(self)
+        self._mCodingSM = CodingStateMachine(CP949SMModel)
+        self._mDistributionAnalyzer = EUCKRDistributionAnalysis()
+        self.reset()
+
+    def get_charset_name(self):
+        return "CP949"
+

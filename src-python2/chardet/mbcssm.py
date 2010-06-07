@@ -76,6 +76,59 @@ Big5SMModel = {'classTable': BIG5_cls,
                'charLenTable': Big5CharLenTable,
                'name': 'Big5'}
 
+# CP949
+
+CP949_cls  = ( \
+    1,1,1,1,1,1,1,1,  # 00 - 07 
+    1,1,1,1,1,1,0,0,  # 08 - 0f 
+    1,1,1,1,1,1,1,1,  # 10 - 17 
+    1,1,1,0,1,1,1,1,  # 18 - 1f 
+    1,1,1,1,1,1,1,1,  # 20 - 27 
+    1,1,1,1,1,1,1,1,  # 28 - 2f 
+    1,1,1,1,1,1,1,1,  # 30 - 37 
+    1,1,1,1,1,1,1,1,  # 38 - 3f 
+    1,4,4,4,4,4,4,4,  # 40 - 47 
+    4,4,4,4,4,4,4,4,  # 48 - 4f 
+    4,4,5,5,5,5,5,5,  # 50 - 57 
+    5,5,5,1,1,1,1,1,  # 58 - 5f 
+    1,5,5,5,5,5,5,5,  # 60 - 67 
+    5,5,5,5,5,5,5,5,  # 68 - 6f 
+    5,5,5,5,5,5,5,5,  # 70 - 77 
+    5,5,5,1,1,1,1,1,  # 78 - 7f 
+    0,6,6,6,6,6,6,6,  # 80 - 87 
+    6,6,6,6,6,6,6,6,  # 88 - 8f 
+    6,6,6,6,6,6,6,6,  # 90 - 97 
+    6,6,6,6,6,6,6,6,  # 98 - 9f 
+    6,7,7,7,7,7,7,7,  # a0 - a7 
+    7,7,7,7,7,8,8,8,  # a8 - af 
+    7,7,7,7,7,7,7,7,  # b0 - b7 
+    7,7,7,7,7,7,7,7,  # b8 - bf 
+    7,7,7,7,7,7,9,2,  # c0 - c7 
+    2,3,2,2,2,2,2,2,  # c8 - cf 
+    2,2,2,2,2,2,2,2,  # d0 - d7 
+    2,2,2,2,2,2,2,2,  # d8 - df 
+    2,2,2,2,2,2,2,2,  # e0 - e7 
+    2,2,2,2,2,2,2,2,  # e8 - ef 
+    2,2,2,2,2,2,2,2,  # f0 - f7 
+    2,2,2,2,2,2,2,0)  # f8 - ff 
+
+CP949_st = (
+    eError,eStart,     3,eError,eStart,eStart,     4,     5,eError,     6,
+    eError,eError,eError,eError,eError,eError,eError,eError,eError,eError,
+    eItsMe,eItsMe,eItsMe,eItsMe,eItsMe,eItsMe,eItsMe,eItsMe,eItsMe,eItsMe,
+    eError,eError,eStart,eStart,eError,eError,eError,eStart,eStart,eStart,
+    eError,eError,eStart,eStart,eStart,eStart,eStart,eStart,eStart,eStart,
+    eError,eStart,eStart,eStart,eStart,eStart,eStart,eStart,eStart,eStart,
+    eError,eStart,eStart,eStart,eStart,eError,eError,eStart,eStart,eStart)
+
+CP949CharLenTable = (0, 1, 2, 0, 1, 1, 2, 2, 0, 2)
+
+CP949SMModel = {'classTable': CP949_cls,
+                'classFactor': 10,
+                'stateTable': CP949_st,
+                'charLenTable': CP949CharLenTable,
+                'name': 'CP949'}
+
 # EUC-JP
 
 EUCJP_cls = ( \
