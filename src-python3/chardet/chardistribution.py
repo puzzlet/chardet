@@ -35,6 +35,7 @@ from .jisfreq import JISCharToFreqOrder, JIS_TABLE_SIZE, JIS_TYPICAL_DISTRIBUTIO
 ENOUGH_DATA_THRESHOLD = 1024
 SURE_YES = 0.99
 SURE_NO = 0.01
+MINIMUM_DATA_THRESHOLD = 3
 
 class CharDistributionAnalysis:
     def __init__(self):
@@ -66,7 +67,7 @@ class CharDistributionAnalysis:
     def get_confidence(self):
         """return confidence based on existing data"""
         # if we didn't receive any character in our consideration range, return negative answer
-        if self._mTotalChars <= 0:
+        if self._mTotalChars <= 0 or self._mFreqChars <= MINIMUM_DATA_THRESHOLD:
             return SURE_NO
 
         if self._mTotalChars != self._mFreqChars:
@@ -122,7 +123,7 @@ class EUCKRDistributionAnalysis(CharDistributionAnalysis):
         else:
             return -1;
 
-class GB2312DistributionAnalysis(CharDistributionAnalysis):
+class GB18030DistributionAnalysis(CharDistributionAnalysis):
     def __init__(self):
         CharDistributionAnalysis.__init__(self)
         self._mCharToFreqOrder = GB2312CharToFreqOrder

@@ -180,54 +180,6 @@ EUCJPSMModel = {'classTable': EUCJP_cls,
                 'charLenTable': EUCJPCharLenTable,
                 'name': 'EUC-JP'}
 
-# EUC-KR
-
-EUCKR_cls  = ( \
-    1,1,1,1,1,1,1,1,  # 00 - 07 
-    1,1,1,1,1,1,0,0,  # 08 - 0f 
-    1,1,1,1,1,1,1,1,  # 10 - 17 
-    1,1,1,0,1,1,1,1,  # 18 - 1f 
-    1,1,1,1,1,1,1,1,  # 20 - 27 
-    1,1,1,1,1,1,1,1,  # 28 - 2f 
-    1,1,1,1,1,1,1,1,  # 30 - 37 
-    1,1,1,1,1,1,1,1,  # 38 - 3f 
-    1,1,1,1,1,1,1,1,  # 40 - 47 
-    1,1,1,1,1,1,1,1,  # 48 - 4f 
-    1,1,1,1,1,1,1,1,  # 50 - 57 
-    1,1,1,1,1,1,1,1,  # 58 - 5f 
-    1,1,1,1,1,1,1,1,  # 60 - 67 
-    1,1,1,1,1,1,1,1,  # 68 - 6f 
-    1,1,1,1,1,1,1,1,  # 70 - 77 
-    1,1,1,1,1,1,1,1,  # 78 - 7f 
-    0,0,0,0,0,0,0,0,  # 80 - 87 
-    0,0,0,0,0,0,0,0,  # 88 - 8f 
-    0,0,0,0,0,0,0,0,  # 90 - 97 
-    0,0,0,0,0,0,0,0,  # 98 - 9f 
-    0,2,2,2,2,2,2,2,  # a0 - a7 
-    2,2,2,2,2,3,3,3,  # a8 - af 
-    2,2,2,2,2,2,2,2,  # b0 - b7 
-    2,2,2,2,2,2,2,2,  # b8 - bf 
-    2,2,2,2,2,2,2,2,  # c0 - c7 
-    2,3,2,2,2,2,2,2,  # c8 - cf 
-    2,2,2,2,2,2,2,2,  # d0 - d7 
-    2,2,2,2,2,2,2,2,  # d8 - df 
-    2,2,2,2,2,2,2,2,  # e0 - e7 
-    2,2,2,2,2,2,2,2,  # e8 - ef 
-    2,2,2,2,2,2,2,2,  # f0 - f7 
-    2,2,2,2,2,2,2,0)  # f8 - ff 
-
-EUCKR_st = (
-    eError,eStart,     3,eError,eError,eError,eError,eError,#00-07 
-    eItsMe,eItsMe,eItsMe,eItsMe,eError,eError,eStart,eStart)#08-0f 
-
-EUCKRCharLenTable = (0, 1, 2, 0)
-
-EUCKRSMModel = {'classTable': EUCKR_cls,
-                'classFactor': 4,
-                'stateTable': EUCKR_st,
-                'charLenTable': EUCKRCharLenTable,
-                'name': 'EUC-KR'}
-
 # EUC-TW
 
 EUCTW_cls = ( \
@@ -280,9 +232,9 @@ EUCTWSMModel = {'classTable': EUCTW_cls,
                 'charLenTable': EUCTWCharLenTable,
                 'name': 'x-euc-tw'}
 
-# GB2312
+# GB18030
 
-GB2312_cls = ( \
+GB18030_cls = ( \
     1,1,1,1,1,1,1,1,  # 00 - 07 
     1,1,1,1,1,1,0,0,  # 08 - 0f 
     1,1,1,1,1,1,1,1,  # 10 - 17 
@@ -316,7 +268,7 @@ GB2312_cls = ( \
     6,6,6,6,6,6,6,6,  # f0 - f7 
     6,6,6,6,6,6,6,0)  # f8 - ff 
 
-GB2312_st = ( \
+GB18030_st = ( \
     eError,eStart,eStart,eStart,eStart,eStart,     3,eError,#00-07 
     eError,eError,eError,eError,eError,eError,eItsMe,eItsMe,#08-0f 
     eItsMe,eItsMe,eItsMe,eItsMe,eItsMe,eError,eError,eStart,#10-17 
@@ -329,13 +281,13 @@ GB2312_st = ( \
 # it is used for frequency analysis only, and we are validing 
 # each code range there as well. So it is safe to set it to be 
 # 2 here. 
-GB2312CharLenTable = (0, 1, 1, 1, 1, 1, 2)
+GB18030CharLenTable = (0, 1, 1, 1, 1, 1, 2)
 
-GB2312SMModel = {'classTable': GB2312_cls,
+GB18030SMModel = {'classTable': GB18030_cls,
                   'classFactor': 7,
-                  'stateTable': GB2312_st,
-                  'charLenTable': GB2312CharLenTable,
-                  'name': 'GB2312'}
+                  'stateTable': GB18030_st,
+                  'charLenTable': GB18030CharLenTable,
+                  'name': 'GB18030'}
 
 # Shift_JIS
 

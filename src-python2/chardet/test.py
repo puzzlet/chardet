@@ -5,7 +5,7 @@ from chardet.universaldetector import UniversalDetector
 count = 0
 u = UniversalDetector()
 for f in glob.glob(sys.argv[1]):
-    print f.ljust(60),
+    print f.ljust(80),
     u.reset()
     for line in file(f, 'rb'):
         u.feed(line)

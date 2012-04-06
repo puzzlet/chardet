@@ -31,8 +31,8 @@ from .charsetgroupprober import CharSetGroupProber
 from .utf8prober import UTF8Prober
 from .sjisprober import SJISProber
 from .eucjpprober import EUCJPProber
-from .gb2312prober import GB2312Prober
-from .euckrprober import EUCKRProber, CP949Prober
+from .gb2312prober import GB18030Prober
+from .euckrprober import CP949Prober
 from .big5prober import Big5Prober
 from .euctwprober import EUCTWProber
 
@@ -43,8 +43,7 @@ class MBCSGroupProber(CharSetGroupProber):
             UTF8Prober(),
             SJISProber(),
             EUCJPProber(),
-            GB2312Prober(),
-            EUCKRProber(),
+            GB18030Prober(),
             CP949Prober(),
             Big5Prober(),
             EUCTWProber()]
