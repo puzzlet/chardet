@@ -1,4 +1,4 @@
-VERSION = 2.0.1
+VERSION = 3.0
 XSLTPROC = xsltproc
 XMLLINT = xmllint
 PYTHON2 = python2.6
@@ -7,9 +7,13 @@ PYTHON3 = python3
 test:
 	cd src-python2/chardet; \
 	${PYTHON2} test.py "../../tests/*/*.xml"; \
+	${PYTHON2} test.py "../../tests/*/*.html"; \
+	${PYTHON2} test.py "../../tests/*/*.txt"; \
 	cd ..
 	cd src-python3/chardet; \
 	${PYTHON3} test.py "../../tests/*/*.xml"; \
+	${PYTHON3} test.py "../../tests/*/*.html"; \
+	${PYTHON3} test.py "../../tests/*/*.txt"; \
 	cd ..
 
 validate:
